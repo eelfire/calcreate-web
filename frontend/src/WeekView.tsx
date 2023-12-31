@@ -27,8 +27,8 @@ function SearchableCourse({ courses, setSelected }: SearchableCourseProps) {
 
     return (
         <>
-            <div>
-                <input type="text" placeholder="Search..." onInput={(e) => setSearchTerm(e.currentTarget.value)} />
+            <div class="m-2">
+                <input class="w-80 border rounded-md p-1" type="text" placeholder="Search..." onInput={(e) => setSearchTerm(e.currentTarget.value)} />
             </div>
             <div class="SearchableList">
                 <table>
@@ -183,6 +183,8 @@ function WeekView({ courses }: WeekViewProps) {
                 </tbody>
             </table>
 
+            <hr></hr>
+
             <h2>Selected Courses</h2>
             <div>
                 <div>
@@ -208,6 +210,8 @@ function WeekView({ courses }: WeekViewProps) {
                     </button>
                 )}
             </For> */}
+
+            <hr></hr>
 
             <SearchableCourse courses={courses} selected={selected} setSelected={setSelected} />
 
